@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <input v-if="isEditMode" :class="css.text" :type="question.inputType" :size="question.size" :id="question.inputId" :placeholder="question.placeHolder" :value="value" @change="change"/>
-        <div v-else :class="css.text">{{question.value}}</div>
+    <div :class="css.text.root">
+        <input v-if="isEditMode" :class="css.text.control" :type="question.inputType" :size="question.size" :id="question.inputId" :placeholder="question.placeHolder" :value="value" @change="change"/>
+        <div v-else :class="css.text.control">{{question.value}}</div>
     </div>
 </template>
 
